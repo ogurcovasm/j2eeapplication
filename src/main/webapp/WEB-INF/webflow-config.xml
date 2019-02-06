@@ -4,11 +4,11 @@
 	xmlns:webflow="http://www.springframework.org/schema/webflow-config"
 	xmlns:faces="http://www.springframework.org/schema/faces"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/webflow-config 
-       http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.xsd
+       http://www.springframework.org/schema/webflow-config/spring-webflow-config.xsd
        http://www.springframework.org/schema/faces 
-       http://www.springframework.org/schema/faces/spring-faces-2.2.xsd">
+       http://www.springframework.org/schema/faces/spring-faces.xsd">
 
 	<bean id="jpaFlowExecutionListener"
 		class="org.springframework.webflow.persistence.JpaFlowExecutionListener">
@@ -39,12 +39,12 @@
 	<faces:resources />
 
 	<bean
-		class="org.spingframework.webflow.mvc.servlet.FlowHandlerMapping">
+		class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
 		<property name="order" value="1" />
 		<property name="flowRegistry" ref="flowRegistry" />
 		<property name="defaultHandler">
 			<bean
-				class="org.springframework.web.servlet.mvs.UrlFilenameViewController" />
+				class="org.springframework.web.servlet.mvc.UrlFilenameViewController" />
 		</property>
 	</bean>
 
