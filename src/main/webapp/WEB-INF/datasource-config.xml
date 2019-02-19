@@ -7,12 +7,11 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="dataSource"
-		class="oracle.jdbc.pool.OracleDataSource" destroy-method="close">
+	<bean id="dataSource" class="oracle.jdbc.pool.OracleDataSource" destroy-method="close">
 		<property name="connectionCachingEnabled" value="true" />
 		<property name="URL" value="jdbc:oracle:thin:@localhost:1521:XE" />
-		<property name="user" value="user" />
-		<property name="password" value="pass" />
+		<property name="user" value="jeeappdb" />
+		<property name="password" value="password" />
 	</bean>
 
 	<bean id="entityManagerFactory"
