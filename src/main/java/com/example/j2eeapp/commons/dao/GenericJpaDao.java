@@ -24,7 +24,7 @@ public abstract class GenericJpaDao<T, ID extends Serializable> implements Gener
 	
 	private EntityManager entityManager;
 	
-	public GenericJpaDao(Class<T> perisistentClass) {
+	public GenericJpaDao(Class<T> persistentClass) {
 		this.persistentClass = persistentClass;
 	}
 
